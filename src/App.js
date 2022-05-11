@@ -1,9 +1,26 @@
-import './App.css';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import Explore from './pages/Explore'
+import Offers from './pages/Offers'
+import SignUp from './pages/SignUp'
+import SignIn from './pages/SignIn'
+import Profile from './pages/Profile'
+import ForgotPassword from './pages/ForgotPassword'
 
 function App() {
   return (
     <>
-      <h1>My App</h1>
+
+    <Router>
+      <Routes>
+        <Route path='/' element={<Explore />} />
+        <Route path='/offers' element={<Offers />} />
+        <Route path='/sign-up' element={<SignUp />} />
+        <Route path='/sign-in' element={<SignIn />} />
+        <Route path='/forgot-password' element={<ForgotPassword />} />
+        <Route path='/profile' element={<Profile />} />
+      </Routes>
+    </Router>
+      {/* Navbar */}
     </>
   );
 }
