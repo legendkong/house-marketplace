@@ -15,7 +15,6 @@ function Navbar() {
       }
    }
 
-
    return (
       <footer className='navbar'>
          <nav className='navbarNav'>
